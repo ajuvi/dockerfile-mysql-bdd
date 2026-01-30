@@ -1,0 +1,8 @@
+# construir la imatge a partir del fitxer dockerfile
+docker build -t mysql-bdd .
+
+# crear un contenidor de la nova imatge
+docker run -d --name mysql-bdd-1 mysql-bdd
+
+# accedir al servidor de mysql
+docker exec -it mysql-bdd-1 mysql -u root -p
